@@ -1,3 +1,4 @@
+// змінні
 const burger = document.querySelector('#burger')
 const menu = document.querySelector('#menu')
 const header = document.querySelector('#header')
@@ -9,8 +10,10 @@ const footer = document.querySelector('.footer')
 const headerImg = document.querySelector('.header__img')
 const headerText = document.querySelector('.header__text')
 const btnHome = document.querySelector('#btnHome')
+// змінні
 
-// бургер и меню
+
+// випадаюче меню і кнопка
 burger.addEventListener('click', () => {
   header.classList.toggle('active')
 })
@@ -25,9 +28,9 @@ btnHome.addEventListener('click', () => {
   mainWrapper.style.display = 'block'
   footer.style.display = 'block'
 })
+// випадаюче меню і кнопка
 
-
-// Отрисовка страницы, после клика на Далее
+// Рендер сторінки, після кліку на ДАЛЕЕ
 btnsStartTesting.forEach (btn => {
   btn.addEventListener('click', () => {
     mainWrapper.style.display = 'none'
@@ -42,9 +45,9 @@ btnsStartTesting.forEach (btn => {
     createEndingPage()
   })
 })
+// Рендер сторінки, після кліку на ДАЛЕЕ
 
-
-// Создание обертки для вопросов
+// Рендер контейнера для запитань
 const createTestingWrapper = () => {
   const testingWrapper = document.createElement('div')
   testingWrapper.className = 'testing container'
@@ -62,8 +65,9 @@ const createTestingWrapper = () => {
   <button class="testing__btn btn" type="button" disabled>далее</button>
   `
 }
+// Рендер контейнера для запитань
 
-// Создание вопросов
+// Створення запитань
 const createTestingPage = (index = 0, width) => {
   const progressbarLine = document.querySelector('.progressbar__line')
   const testingIinfo = document.querySelector('.testing__info')
@@ -77,8 +81,9 @@ const createTestingPage = (index = 0, width) => {
     const type = questions[index].type
     testingTitle.innerHTML = questions[index].title
     questionsItems.innerHTML = ''
-    
-    // Создание вопросов, если текстовые
+    // Створення запитань
+
+    // Створення запитань, якщо текстові
     if(type === 'text') {
       questionsItems.classList = 'questions questions-text'
 
@@ -99,8 +104,9 @@ const createTestingPage = (index = 0, width) => {
       })
 
     }
+     // Створення запитань, якщо текстові
     
-    // Создание вопросов, если выбор цвета
+    // Створення запитань, якщо вибір кольору
      else if(type === 'color') {
       questionsItems.classList = 'questions questions-color'
 
@@ -115,8 +121,9 @@ const createTestingPage = (index = 0, width) => {
       })
       
     }
+    // Створення запитань, якщо вибір кольору
 
-    // Создание вопросов, если картинка с номерами
+    // Створення запитань, якщо картинка з кольорами
     else if(type === 'imageNumber') {
       questionsItems.classList = 'questions questions-image questions-image-number'
       const imgQuestion = document.createElement('img')
@@ -138,8 +145,9 @@ const createTestingPage = (index = 0, width) => {
       newQuestionWrapper.appendChild(newQuestion)
       })
     }
+     // Створення запитань, якщо картинка з кольорами
 
-    // Создание вопросов, если картинка с текстом
+    // Створення запитань, якщо картинка з текстом
     else if(type === 'imagetext') {
       questionsItems.classList = 'questions questions-image questions-image-text'
       const imgQuestion = document.createElement('img')
@@ -286,8 +294,10 @@ const runTimer = () => {
   setInterval(timer, 1000)
 }
 
+ // Створення запитань, якщо картинка з текстом
 
-// счетчики при клике на кнопку Далее
+
+// Лічильники по кліку на ДАЛЕЕ
 const clickTestingBtn = () => {
   const testingBtn = document.querySelector('.testing__btn')
   
@@ -300,8 +310,9 @@ const clickTestingBtn = () => {
     createTestingPage(i, progressbarLineWidth)
   })
 }
+// Лічильники по кліку на ДАЛЕЕ
 
-// Проверка на checked
+// Перевірка на checked
 const chekStatusTestingBtn = () => {
   const testingBtn = document.querySelector('.testing__btn')
   const testingQuestions = document.querySelector('.questions')
@@ -319,6 +330,7 @@ const chekStatusTestingBtn = () => {
     }
   })
 }
+// Перевірка на checked
 
 
 
