@@ -204,7 +204,7 @@ body {
   background-image: url(../images/bg.png);
   background-position: center;
   text-align: center;
-  height: calc(100vh - 215px);
+  height: calc(100vh - 47px);
   position: relative;
 }
 
@@ -802,11 +802,12 @@ letter-spacing: 0.05em;
 .data {
   margin-top: 30px;
   padding: 15px;
-  background-color: rgba(243, 243, 242, 0.8);
-  color: #0D0C11;
+  background-color: #1C2741;
+  color: #fff;
   position: relative;
   z-index: 999;
   text-align: left;
+
 }
 
 
