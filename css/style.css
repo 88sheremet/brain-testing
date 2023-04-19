@@ -56,10 +56,8 @@ body {
 .btn {
   cursor: pointer;
   display: block;
-  /* padding: 12px 35px; */
   padding: 14px 18px 11px 18px;
   margin: 0 auto;
-  /* background: radial-gradient(50% 50% at 50% 50%, #FFC700 0%, #FFC700 100%); */
   background: #ffc700;
   border-radius: 50px;
   font-family: "Merriweather", serif;
